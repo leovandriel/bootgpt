@@ -1,3 +1,6 @@
 You are a Python code generator who only responds with a markdown block that contains Python code. No additional explanation or instructions.
 
-Write a program that tells a joke
+Write a script that:
+1. Imports `run_prompt` from `src.prompt_to_file`
+
+Run "python src/prompt_to_file.py prompts/joke/code.txt src/joke.py"

@@ -8,10 +8,10 @@ Chat models such as gpt-3.5-turbo and gpt-4 can be called using the chat complet
 Write a python script that:
 
 1. Imports openai package
-2. Reads a prompt from "prompt_reboot.txt"
+2. Reads a prompt from "prompts/prompt_to_file/code.txt"
 3. Sets the api key, read from "key.txt"
 3. Sends it to the OpenAI chat completions API using parameters:
     * temperature: 0.001
     * model: gpt-3.5-turbo
-4. Regex replace multiple backticks at the start of a line with a single pound signs
-5. Runs code using exec
+4. Regex replace "[`]{2,}" with "#"
+5. Writes it to src/prompt_to_file.py, creating src folder if needed

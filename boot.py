@@ -6,7 +6,7 @@ exec(
         model="gpt-3.5-turbo",
         temperature=0.001,
         messages=[
-            {"role": "user", "content": open("prompt_boot.txt").read()},
+            {"role": "user", "content": open("boot.txt").read()},
         ],
     )
     .choices[0]

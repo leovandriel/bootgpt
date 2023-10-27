@@ -1,4 +1,4 @@
-You are a Python code generator who only responds with a markdown block that contains Python code. No additional explanation or instructions.
+You are a Python code generator who only responds with a markdown block that contains Python code. No additional explanation, instructions, or notes.
 
 Chat models such as gpt-3.5-turbo and gpt-4 can be called using the chat completions endpoint:
 
@@ -9,12 +9,12 @@ Write a python script that:
 
 1. Imports openai package
 2. Reads a list of prompts files:
-    * prompt_1.txt
-    * prompt_2.txt
+    * prompts/prompt_to_file/write.txt
+    * promps/joke/write.txt
+    * promps/joke/run.txt
 3. Sends eachto the OpenAI chat completions API using parameters:
     * api_key: read from "key.txt"
     * temperature: 0.001
     * model: gpt-3.5-turbo
-4. Regex replace multiple backticks at the start of a line with a single pound signs
-5. Writes each to a file name "run_<number>.py"
-6. Runs each using import
+4. Regex replace "[`]{2,}" with "#"
+5. Runs each using exec
