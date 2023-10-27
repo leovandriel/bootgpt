@@ -1,2 +1,4 @@
 key.txt
-src
+src/
+builder.py
+app/

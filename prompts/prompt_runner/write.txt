@@ -9,9 +9,9 @@ Write a python script that:
 
 1. Imports openai package
 2. Reads a prompt from "prompts/prompt_runner/code.txt"
-3. Sets the api key, read from "key.txt"
-4. Sends it to the OpenAI chat completions API using parameters:
+3. Sends it to the OpenAI chat completions API using parameters:
+    * api_key: read from "key.txt"
     * temperature: 0.001
     * model: gpt-3.5-turbo
-5. Regex replace "[`]{2,}" with "#"
-6. Writes it to src/prompt_runner.py, creating src folder if needed
+4. Regex replace "[`]{2,}" with "#"
+5. Writes it to src/prompt_runner.py, creating src folder if needed

@@ -10,8 +10,7 @@ Write a python script that:
 1. Imports openai package
 2. Reads a list of prompts files:
     * prompts/prompt_runner/write.txt
-    * promps/joke/write.txt
-    * promps/joke/run.txt
+    * prompts/builder/write.txt
 3. Sends each to the OpenAI chat completions API using parameters:
     * api_key: read from "key.txt"
     * temperature: 0.001

@@ -1,6 +1,6 @@
 # BootGPT
 
-*Write code using almost only prompts and GPT.*
+*Write an application using almost only prompts and a GPT.*
 
 ## Usage
 
@@ -8,20 +8,33 @@ Put your OpenAI API key in a file called `key.txt`:
 
     chmod 600 key.txt
 
-Boot it:
+Boot the application builder (might take a minute):
 
     python -m boot
 
+Run the application builder, e.g. enter "something that writes jokes":
+
+    python -m builder
+
+Run your application:
+
+    python -m app.run
+
 ## About
 
-Let's build an application for software engineering with prompts, using only
-prompts.
+This tools is about building an application for building applications using
+natural language and not code. There are plenty GPT-based application writing
+tools out there, but they all have a lot of code in them. If writing
+applications using natural language is the future, then let's start now.
+
+Consequently, you will find very little code in this repository. It uses a
+minimal amount of code to get started and builds from there using natural
+language prompts only.
 
 ## Booting
 
 `boot.py` is the only Python source file in this project. It forms the start of
 a bootstrap sequence that sets up an increasingly capable programming toolchain.
-`boot.py` is intentionally minimal.
 
 The first step of the boot sequence is recreating `boot.py`. After all, what is
 an application to write application if it cannot write itself?
@@ -41,6 +54,14 @@ python.
 Use `//` to add comments to prompts that are read by `prompt_runner`
 
 ## FAQ
+
+*Why?*
+
+Application building tools like
+[gpt-engineer](https://github.com/AntonOsika/gpt-engineer) are showing promise
+but still get stuck on relatively simple applications. To understand what is
+really needed to write software using a GPT, I want to start from scratch and
+understand the fundamental challenges that comes with AI-generated code.
 
 *Why not just write one big prompt that builds the whole application in one go?*
 

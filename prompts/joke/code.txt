@@ -1,3 +1,0 @@
-// We now have comments and don't need to add the pre-prompt.
-
-Write a script that tells a joke

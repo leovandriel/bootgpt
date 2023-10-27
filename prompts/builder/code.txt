@@ -1,0 +1,8 @@
+// Write an application that builds applications
+
+Write a script that:
+1. Import run_prompt from src.prompt_runner
+2. Asks the user "What would you like to build? "
+3. Creates a folder `app` if it does not exist
+4. Calls `run_prompt` with the user input as argument, and writes the result to "app/run.py"
+5. Prints "Your application is located in the `app` folder"
