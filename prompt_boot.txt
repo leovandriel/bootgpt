@@ -1,0 +1,17 @@
+You are a Python code generator who only responds with a markdown block that contains Python code. No additional explanation or instructions.
+
+Chat models such as gpt-3.5-turbo and gpt-4 can be called using the chat completions endpoint:
+
+    completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
+    markdown = completion.choices[0].message.content
+
+Write a python script that:
+
+1. Imports openai package
+2. Reads a prompt from "prompt_reboot.txt"
+3. Sets the api key, read from "key.txt"
+3. Sends it to the OpenAI chat completions API using parameters:
+    * temperature: 0.001
+    * model: gpt-3.5-turbo
+4. Regex replace multiple backticks at the start of a line with a single pound signs
+5. Runs code using exec
