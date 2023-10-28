@@ -10,5 +10,5 @@ exec(
         ],
     )
     .choices[0]
-    .message.content.replace("```", "#```")
+    .message.content
 )

@@ -1,19 +1,16 @@
-You are a Python code generator who only responds with a markdown block that contains Python code and no additional explanation, instructions, or notes.
-
-Chat models such as gpt-3.5-turbo and gpt-4 can be called using the chat completions endpoint:
+From openai-python: Chat models such as gpt-3.5-turbo and gpt-4 can be called using the chat completions endpoint.
 
     completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
-    markdown = completion.choices[0].message.content
+    print(completion.choices[0].message.content)
 
-Write a python source file that:
+Write a script with a function `run_prompt` with argument `prompt` to:
 
-1. Imports openai and re package
-2. Defines function `run_prompt` with argument `prompt` that:
-    1. For each prompt line, if it contains a "//" only keep what comes before. Join using newlines.
-    2. Prefix the prompt with a string that contains the first sentence of this message, i.e. "You are a Python .."
-    3. Sends it to openai.ChatCompletion.create using parameters:
+1. For each prompt line, if it contains a "//" only keep what comes before. Join using newlines.
+2. Call the chat completions API:
+    * system: "You are a Python code generator who only replies with Python code. No additional explanation or instructions."
+    * parameters:
         * api_key: read from "key.txt"
-        * temperature: 0.001
         * model: gpt-3.5-turbo
-    4. Regex replace "[`]{2,}" with "#"
-    5. returns the code
+        * temperature: 0.001
+3. Regex replace "[`]{2,}[a-z]*" with ""
+4. Return the code
