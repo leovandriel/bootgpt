@@ -1,3 +1,5 @@
+<img src="logo.jpg" width="25%" height="25%" align="right" alt="bootGPT logo">
+
 # bootGPT
 
 Writing an application writer using almost only prompts and an LLM, learning about
