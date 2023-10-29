@@ -1,0 +1,7 @@
+Write a script to 
+
+1. Read a list of prompts files:
+    * prompts/builder/write.txt
+    * prompts/test/run.txt
+2. For each prompt, call `run_prompt` (import from src.prompt_runner)"
+3. Run result using exec

@@ -1,9 +1,9 @@
-// Write an application that builds applications
+// Write an application that writes applications
 
 Write a script to:
 
-1. Import run_prompt from src.prompt_runner
-2. Ask the user "What would you like to build? "
-3. Create a folder `app` if it does not exist
-4. Call `run_prompt` with the user input as argument, and writes the result to "app/run.py"
-5. Print "Run with 'python -m app.run'"
+1. If no arguments are provided, ask the user "What would you like to build? ", else concatenate the arguments
+2. Create a folder `app` if it does not exist
+3. Call `run_prompt` (import from src.prompt_runner) with the user input as argument
+4. Write the result to "app/run.py"
+4. Print "Run with 'python -m app.run'"
