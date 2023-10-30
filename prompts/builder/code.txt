@@ -1,6 +1,6 @@
 // Write an application that writes applications
 
-Write a script to:
+Write script builder.py that:
 
 1. If no arguments are provided, ask the user "What would you like to build? ", else concatenate the arguments
 2. Create a folder `app` if it does not exist

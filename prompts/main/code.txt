@@ -1,6 +1,7 @@
 Write a script to:
 
 1. Read a list of prompts files:
+    * prompts/handle_request/write.txt
     * prompts/builder/write.txt
     * prompts/test/run.txt
 2. For each, print "Bootstrapping: " followed by the path of the prompt

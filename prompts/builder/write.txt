@@ -1,1 +1,1 @@
-Write a script to `run_prompt_cached` from `src.prompt_runner`, call with the contents of "prompts/builder/code.txt", and write return value to "builder.py"
+Read "prompts/builder/code.txt" and call `handle` (import from `src.request`) with it
