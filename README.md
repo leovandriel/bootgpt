@@ -63,6 +63,30 @@ we want to run a prompt. For every source file we still need two prompts,
 because the language model understandably refuses to write python that writes
 python.
 
+The second is `prompt_runner_cache`, which adds basic caching capabilities in
+order to speed access to the LLM. This simply appends to the existing source
+file, requiring a reload of the module.
+
+Lastly, reboot runs the `main` prompt, which is the main sequence of
+bootstrapping prompts. By splitting this out of reboot, we have access to the
+functionality we defined in the above prompts, like prompt comments.
+
+## Caching
+
+To iterate fast, we cache all API calls early in the bootstrap process, using a
+very basic cache that writes to the `cache` folder with the md5sum of the prompt
+as filename, and .py extension.
+
+The exception are the early boot prompts, up to the `main` prompt. After the
+first boot run, you can use main.py for all subsequent boots, unless you modify
+any of the prompts that run before main:
+
+    python -m main
+
+The cache does not invalidate. In order to purge the cache, run:
+
+    rm -rf cache src app main.py builder.py
+
 ## Prompting
 
 Use `//` to add comments to prompts that are read by `prompt_runner`

@@ -7,7 +7,8 @@ Write a script to:
 
 1. Read a list of prompts files:
     * prompts/prompt_runner/write.txt
-    * prompts/main/run.txt
+    * prompts/prompt_runner_cache/write.txt
+    * prompts/main/write.txt
 2. For each prompt, call the chat completions API:
     * system: "You are a Python code generator who only replies with Python code. No additional explanation or instructions."
     * parameters:

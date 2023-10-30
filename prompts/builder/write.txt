@@ -1,1 +1,1 @@
-Write a script to `run_prompt` from `src.prompt_runner`, call with the contents of "prompts/builder/code.txt", and write return value to "builder.py"
+Write a script to `run_prompt_cached` from `src.prompt_runner`, call with the contents of "prompts/builder/code.txt", and write return value to "builder.py"

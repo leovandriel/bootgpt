@@ -1,0 +1,9 @@
+Write a function `run_prompt_cached` with argument `prompt` to:
+
+1. Concatenate a filename, for folder 'cache', with the md5 of the prompt as name, and "py" extension
+2. If file exists
+    * Return the contents of the file
+3. If the file does not exists
+    * Call `run_prompt`
+    * Save the result to the file, creating cache folder if needed
+    * Return the result

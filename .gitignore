@@ -2,3 +2,5 @@ key.txt
 src/
 builder.py
 app/
+main.py
+cache/

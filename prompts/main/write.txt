@@ -1,0 +1,6 @@
+Write a script to 
+
+1. Read prompts/main/code.txt
+2. Call `run_prompt_cached` (import from src.prompt_runner)"
+3. Write the result to main.py
+4. Run result using exec
