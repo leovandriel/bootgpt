@@ -103,8 +103,8 @@ there are no python sources to point to. To see the code is executed, modify the
 suspected prompt by inserting a line that says something like "Print it", right
 before "Run using exec".
 
-The prompt runner looks for the `--verbose` flag to print the output of the model.
-This can be helpful for getting context for a error message:
+The prompt runner looks for the `--verbose` flag (`-v`) to print the output of
+the model. This can be helpful for getting context for a error message:
 
     python -m boot --verbose
     python -m main --verbose

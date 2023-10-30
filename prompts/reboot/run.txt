@@ -5,7 +5,7 @@ From openai-python: Chat models such as gpt-3.5-turbo and gpt-4 can be called us
 
 Write a script to:
 
-1. Print "Bootstrapping..", no newline, flush
+1. Print "Bootstrapping.."
 2. Read a list of prompts files:
     * prompts/prompt_runner/write.txt
     * prompts/prompt_runner_cache/write.txt
