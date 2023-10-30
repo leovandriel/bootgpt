@@ -85,7 +85,7 @@ any of the prompts that run before main:
 
 The cache does not invalidate. In order to purge the cache, run:
 
-    rm -rf cache src app main.py builder.py
+    rm -rf cache
 
 ## Prompting
 

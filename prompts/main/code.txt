@@ -1,7 +1,9 @@
-Write a script to 
+Write a script to:
 
 1. Read a list of prompts files:
     * prompts/builder/write.txt
     * prompts/test/run.txt
-2. For each prompt, call `run_prompt_cached` (import from src.prompt_runner)"
-3. Run result using exec
+2. For each, print "\rBootstrapping: " followed by the path of the prompt. Flush without newline
+3. Read the prompt and call `run_prompt_cached` (import from src.prompt_runner)"
+4. Run the result using exec
+5. Print "\r" without newline
