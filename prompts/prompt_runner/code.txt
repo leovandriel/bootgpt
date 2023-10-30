@@ -3,15 +3,14 @@ From openai-python: Chat models such as gpt-3.5-turbo and gpt-4 can be called us
     completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
     print(completion.choices[0].message.content)
 
-Write a script with a function `run_prompt` with argument `prompt` to:
+Write a script with a function `run_prompt` with argument `prompt` and `system` (default: "You are a Python code generator who only replies with Python code. No additional explanation or instructions.") to:
 
 1. For each prompt line, if it contains a "//" only keep what comes before. Join using newlines.
-2. Add to the end of the prompt "Make sure to import the right packages."
-3. Call the chat completions API:
-    * system: "You are a Python code generator who only replies with Python code. No additional explanation or instructions."
+2. Call the chat completions API:
+    * include system message
     * parameters:
         * api_key: read from "key.txt"
         * model: gpt-3.5-turbo
         * temperature: 0.001
-4. Regex replace "[`]{2,}[a-z]*" with ""
-5. Return the code
+3. Regex replace "[`]{2,}[a-z]*" with ""
+4. Return the code

@@ -7,3 +7,5 @@ Write a script to:
 3. Call `run_prompt_cached` (import from src.prompt_runner) with the user input as argument
 4. Write the result to "app/run.py"
 5. Print "Run with: python -m app.run"
+
+Make sure to import the right packages

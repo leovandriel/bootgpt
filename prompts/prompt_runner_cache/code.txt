@@ -1,4 +1,4 @@
-Write a function `run_prompt_cached` with argument `prompt` to:
+Write a function `run_prompt_cached` with argument `prompt` and `system` (default: "You are a Python code generator who only replies with Python code. No additional explanation or instructions.") to:
 
 1. Concatenate a filename, for folder 'cache', with the md5 of the prompt as name, and "py" extension
 2. If the file does not exists
