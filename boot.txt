@@ -15,4 +15,4 @@ Write a python script to:
 3. Regex replace "[`]{2,}" with "#"
 4. Run code using exec
 
-Only provide code, no additional or notes.
+Only provide code, no additional explanation or instructions.
