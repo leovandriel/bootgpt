@@ -5,5 +5,5 @@ Write a script to:
     * prompts/builder/write.txt
     * prompts/test/run.txt
 2. For each, print "Bootstrapping: " followed by the path of the prompt
-3. Read the prompt and call `run_prompt` (import from src.chat)"
+3. Read the prompt and call `run_prompt` (import from src.api)"
 4. Run the result using exec

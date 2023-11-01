@@ -21,7 +21,7 @@ Define function handle_write_file with argument `response`:
 Define function `handle` with argument `request`:
 
 1. Read system message from prompts/handle_request/system.txt
-1. Call `run_prompt` (import from src.chat) with request and system message
+1. Call `run_prompt` (import from src.api) with request and system message
 2. Split the response into lines, the first being the action
 3. If action is "read_file", then call handle_read_file with request and response
 4. If action is "write_file", then call handle_write_file with response
