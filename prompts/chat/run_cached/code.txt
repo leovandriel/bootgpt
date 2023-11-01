@@ -1,0 +1,11 @@
+Example messages: [{"role": "user", "content": "Hello world"}])
+
+Write a function `run_cached` with argument `messages`:
+
+1. Compute the md5 checksum of the content of the messages
+2. Concatenate a filename, for folder 'cache', with the md5 checksum as name, and "py" extension
+3. If the file does not exists
+    * Call `run`
+    * Save the result to the file, creating cache folder if needed
+4. Else, if it does exist, read the cached file
+5. Return the result

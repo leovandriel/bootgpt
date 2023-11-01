@@ -1,7 +1,0 @@
-Write a script to:
-
-1. Import src.chat
-2. Read a prompt from "prompts/chat/run_prompt_cached/code.txt"
-3. Call src.chat.run_prompt with the prompt
-4. Append a newline and the result to the file "src/chat.py"
-5. Reload src.chat

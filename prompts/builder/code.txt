@@ -4,7 +4,7 @@ Write script builder.py that:
 
 1. If no arguments are provided, ask the user "What would you like to build? ", else concatenate the arguments
 2. Create a folder `app` if it does not exist
-3. Call `run_prompt_cached` (import from src.chat) with the user input as argument
+3. Call `run_prompt` (import from src.chat) with the user input as argument
 4. Write the result to "app/run.py"
 5. Print "Run with: python -m app.run"
 

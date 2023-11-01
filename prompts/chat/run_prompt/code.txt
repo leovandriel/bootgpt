@@ -1,16 +1,11 @@
-From openai-python: Chat models such as gpt-3.5-turbo and gpt-4 can be called using the chat completions endpoint.
+Example messages: [{"role": "system", "content": "You are an assistant"}, {"role": "user", "content": "Hello world"}])
 
-    completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
-    print(completion.choices[0].message.content)
+Write a function `run_prompt` with argument user and system (default: "You are a Python code generator who only replies with Python code. No additional explanation or instructions.") to:
 
-Write a script with a function `run_prompt` with argument `prompt` and `system` (default: "You are a Python code generator who only replies with Python code. No additional explanation or instructions.") to:
-
-1. For each prompt line, if it contains a "//" only keep what comes before. Join using newlines.
-2. Call the chat completions API:
-    * include system message
-    * parameters:
-        * api_key: read from "key.txt"
-        * model: gpt-3.5-turbo
-        * temperature: 0.001
-3. Regex replace "[`]{2,}[a-z]*" with ""
-4. Return the code
+1. For each line in user string, if it contains a "//" only keep what comes before (without strip). Join using newlines.
+2. Create a messages array that wraps system and user
+3. Call the run_cached function with the messages
+4. Regex replace "[`]{2,}[a-z]*" with ""
+5. If the command line arguments (import sys) include "--verbose" or "-v"
+    * print 2 newlines, the result, and 2 newlines
+6. Return the code
