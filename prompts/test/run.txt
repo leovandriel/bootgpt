@@ -1,8 +1,9 @@
 Write a script to 
 
 1. Move app/run.py to app/run.py.backup, if app/run.py exists
-2. Call builder.py with argument: "print the 10th prime number using vanilla python", prevent it from printing to stdout
+2. Call builder.py with argument: "print the 1234th prime number using vanilla python", prevent it from printing to stdout
 3. Call app/run.py and read the output of it
 4. Delete app/run.py
 5. Move app/run.py.backup back to app/run.py, if app/run.py.backup exists
-6. If the output is not 29, throw an exception indicating the test failed and expected value
+6. If the output is not 10061, throw an exception indicating the test failed, the output, and expected value
+7. Write "Test: 1234th prime is indeed " + output

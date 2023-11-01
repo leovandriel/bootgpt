@@ -13,4 +13,4 @@ Write a script to:
         * model: gpt-3.5-turbo
         * temperature: 0.001
 3. Regex replace "[`]{2,}[a-z]*" with ""
-4. Write it to src/chat.py, creating src folder if needed
+4. Write result to src/chat.py, creating src folder if needed
