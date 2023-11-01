@@ -38,11 +38,8 @@ Doesn't work? See [Troubleshooting](#troubleshooting)
 This tools is about building software for building software using natural
 language, not code. There are plenty GPT-based application writing tools out
 there, but they are built with human-written code. If writing applications using
-natural language is the future, then let's start now.
-
-Consequently, you will find very little code in this repository. It uses a
-minimal amount of code to get started and builds from there using natural
-language prompts only.
+natural language is the future, then let's start now. We use a minimal amount of
+code to get started and build from there using natural language prompts only.
 
 ## Booting
 

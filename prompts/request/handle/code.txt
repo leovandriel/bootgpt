@@ -1,0 +1,17 @@
+// Write an application that writes applications
+
+Example messages: [{"role": "system", "content": "You are an assistant"}, {"role": "user", "content": "Hello world"}])
+
+Define function `handle` with argument `request` string:
+
+1. Read prompts/request/handle/system.txt
+2. Keep a list of messages, initialized with system content and user request 
+3. Loop over the following:
+    * Call `run_cached` (import src.api) with messages argument
+    * If the result is already in messages, throw an error
+    * Append the result as assistant's code to messages
+    * Redirect stdout to string and run the code with exec
+    * Append output to messages
+    * If output is empty, break out of loop
+
+Make sure to import the right packages
