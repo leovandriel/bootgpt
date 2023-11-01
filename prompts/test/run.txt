@@ -6,4 +6,4 @@ Write a script to
 4. Delete app/run.py
 5. Move app/run.py.backup back to app/run.py, if app/run.py.backup exists
 6. If the output is not 10061, throw an exception indicating the test failed, the output, and expected value
-7. Write "Test: 1234th prime is indeed " + output
+7. Write "Bootstrapping: completed"

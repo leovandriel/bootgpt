@@ -1,9 +1,14 @@
 Write a script to:
 
 1. Read a list of prompts files:
+    * prompts/api/run/write.txt
+    * prompts/api/run_cached/write.txt
+    * prompts/api/run_prompt/write.txt
     * prompts/request/handle/write.txt
+    * prompts/api/model_arg/write.txt
+    * prompts/request/model_upgrade/write.txt
     * prompts/builder/write.txt
     * prompts/test/run.txt
 2. For each, print "Bootstrapping: " followed by the path of the prompt
-3. Read the prompt content and call `run_prompt` (import from src.api)
+3. Read the prompt file and call `run_prompt` (import from src.api)
 4. Run the result using exec

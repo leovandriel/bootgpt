@@ -1,0 +1,5 @@
+Within """ quotes, \n becomes \\n.
+
+In the file src/api.py, move the model name as the second argument of the run function. Give it default value "gpt-3.5-turbo".
+
+Remember to use print to view a file

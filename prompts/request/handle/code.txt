@@ -11,7 +11,7 @@ Define function `handle` with argument `request` string:
     * If the result is already in messages, throw an error
     * Append the result as assistant's code to messages
     * Redirect stdout to string and run the code with exec
-    * Append output to messages
+    * Append output to messages (role user)
     * If output is empty, break out of loop
 
 Make sure to import the right packages

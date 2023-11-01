@@ -1,0 +1,3 @@
+Within """ quotes, \n becomes \\n.
+
+In the file src/api.py, add a `model` argument to the `run_cached` call. Give it default value "gpt-3.5-turbo".
