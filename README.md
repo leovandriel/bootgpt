@@ -57,13 +57,13 @@ After this `reboot` step, we need to branch out, not to get stuck in a chain of
 prompts that can only run prompts to run prompts. Reboot allows us to run
 multiple prompts in sequence.
 
-The first of this is a `prompt_runner` source file. This breaks us free from
+The first of this is a `run_prompt` source file. This breaks us free from
 having to provide detailed instructions on how to call the OpenAI API every time
 we want to run a prompt. For every source file we still need two prompts,
 because the language model understandably refuses to write python that writes
 python.
 
-The second is `prompt_runner_cache`, which adds basic caching capabilities in
+The second is `run_prompt_cached`, which adds basic caching capabilities in
 order to speed access to the LLM. This simply appends to the existing source
 file, requiring a reload of the module.
 
@@ -89,7 +89,7 @@ The cache does not invalidate. In order to purge the cache, run:
 
 ## Prompting
 
-Use `//` to add comments to prompts that are read by `prompt_runner`
+Use `//` to add comments to prompts that are read by `run_prompt`
 
 ## Troubleshooting
 

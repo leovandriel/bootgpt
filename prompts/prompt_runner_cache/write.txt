@@ -1,7 +1,0 @@
-Write a script to:
-
-1. Import src.prompt_runner
-2. Read a prompt from "prompts/prompt_runner_cache/code.txt"
-3. Call src.prompt_runner.run_prompt with the prompt
-4. Append a newline and the result to the file "src/prompt_runner.py"
-5. Reload src.prompt_runner
