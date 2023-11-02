@@ -10,6 +10,7 @@ Write a script to:
     * prompts/api/run/write.txt
     * prompts/api/run_cached/write.txt
     * prompts/api/run_prompt/write.txt
+    * prompts/api/snapshot/run.txt
     * prompts/main/write.txt
 3. For each prompt, call the chat completions API:
     * system: "You are a Python code generator who only replies with Python code. No additional explanation or instructions."

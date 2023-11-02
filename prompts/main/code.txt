@@ -1,9 +1,7 @@
 Write a script to:
 
-1. Read a list of prompts files:
-    * prompts/api/run/write.txt
-    * prompts/api/run_cached/write.txt
-    * prompts/api/run_prompt/write.txt
+1. If src/api.py.snapshot exists, copy it to src/api.py
+2. Read a list of prompts files:
     * prompts/request/handle/write.txt
     * prompts/api/model_arg/write.txt
     * prompts/request/model_upgrade/write.txt
