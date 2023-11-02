@@ -23,13 +23,14 @@ Boot the application builder (might take a minute):
 
     python -m boot
 
-Run the application builder, e.g. enter "something that writes jokes":
+Run the application builder:
 
-    python -m builder
+    python -m builder write a script in factorial.py that prints factorial of the provided argument
+    python -m builder in the file factorial.py, update the usage text to "usage: factorial int"
 
 Run your application:
 
-    python -m app.run
+    python -m factorial 10
 
 Doesn't work? See [Troubleshooting](#troubleshooting)
 

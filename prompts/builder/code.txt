@@ -1,9 +1,6 @@
 Write the following script to builder.py:
 
 1. If no command line arguments are provided, ask the user "What would you like to build? ", else concatenate the arguments
-2. Create a folder `app` if it does not exist
-3. Call `run_prompt` (import from src.api) with the user input as argument
-4. Write the result to "app/run.py"
-5. Print "Run with: python -m app.run"
+2. Call `handle` (import from src.request) with the user input as argument
 
 Make sure to import the right packages
