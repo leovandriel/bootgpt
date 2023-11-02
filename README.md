@@ -19,13 +19,13 @@ Put your OpenAI API key in a file called `key.txt`:
 
     chmod 600 key.txt
 
-Boot the application builder (might take a minute):
+Boot the application builder (takes a minute):
 
     python -m boot
 
-Run the application builder:
+Run the builder:
 
-    python -m builder write a script in factorial.py that prints factorial of the provided argument
+    python -m builder write a script in factorial.py that prints the factorial of the provided argument
     python -m builder in the file factorial.py, update the usage text to "usage: factorial int"
 
 Run your application:
@@ -36,20 +36,23 @@ Doesn't work? See [Troubleshooting](#troubleshooting)
 
 ## About
 
-This tools is about building software for building software using natural
-language, not code. There are plenty GPT-based application writing tools out
-there, but they are built with human-written code. If writing applications using
-natural language is the future, then let's start now. We use a minimal amount of
-code to get started and build from there using natural language prompts only.
+This tool writes software for writing software using natural language, not code.
+There are plenty GPT-based application writing tools out there, but they are
+built with human-written code. If writing applications using natural language is
+the future, then let's start now. We use a minimal amount of code to get started
+and build from there using natural language prompts only.
 
 ## Booting
 
 `boot.py` is the only Python source file in this repository. It forms the start
-of a bootstrap sequence that sets up an increasingly capable programming
-toolchain.
+of a bootstrap sequence that sets up an increasingly capable programming tool
+chain. It simply reads the prompt in `boot.txt` and feeds it to the chat
+completions API.
 
-The first step of the boot sequence is recreating `boot.py`. After all, what is
-an application to write application if it cannot write itself?
+As a first step of the boot sequence, `boot.txt` recreates the functionality
+`boot.py`. After all, what is an application to write applications if it cannot
+write itself? This also encourages us to start small and shows our premise has
+some validity.
 
 After this `reboot` step, we need to branch out, not to get stuck in a chain of
 prompts that can only run prompts to run prompts. Reboot allows us to run
@@ -57,12 +60,12 @@ multiple prompts in sequence.
 
 The first of this is a `run` source file. This breaks us free from having to
 provide detailed instructions on how to call the OpenAI API every time we want
-to run a prompt. For every source file we still need two prompts, because the
-language model has diminished capabilities when writing python that writes
-python.
+to run a prompt. For every source file, we still need two prompts because it is
+harder to instruct the language model in a single prompt to write python to
+write python.
 
 The second is `run_cached`, which adds basic caching capabilities in order to
-speed access to the LLM. This simply appends to the existing source file,
+speedup repeated boot runs. This simply appends to the existing source file,
 requiring a reload of the module. The third is `run_prompt`, which simplifies
 calling the API with a single prompt.
 
@@ -73,28 +76,25 @@ functionality we defined in the above prompts, like prompt comments.
 ## Caching
 
 To iterate fast, we cache all API calls early in the bootstrap process, using a
-very basic cache that writes to the `cache` folder with the md5sum of the
-messages as filename, and .py extension.
+basic cache that writes to the `cache` folder with the md5sum of the messages as
+filename, and .py extension.
 
-The exception are the early boot prompts, up to the `main` prompt. After the
+The exceptions are the early boot prompts, up to the `main` prompt. After the
 first boot run, you can use main.py for all subsequent boots, unless you modify
 any of the prompts that run before main:
 
     python -m main
 
-The cache does not invalidate. In order to purge the cache, run:
+The cache does not invalidate. To purge the cache, run:
 
     rm -rf cache
 
-## Prompting
-
-Use `//` to add comments to prompts that are read by `run_prompt`
-
 ## Troubleshooting
 
-There is a good chance that it throws an error or otherwise doesn't work as
-expected. For the same input, the GPT model does not always write the same code.
-On top of that, this tool still have many imperfections.
+There is a good chance that your boot run throws an error or otherwise doesn't
+work as expected. For the same input, the GPT model does not always write the
+same code. More over, OpenAI updates their models regularly, resulting in
+different completions.
 
 If the `boot` run fails, you probably get a stack trace with very little
 information in it. This is because we use the `exec` function to run code and
@@ -103,7 +103,7 @@ suspected prompt by inserting a line that says something like "Print it", right
 before "Run using exec".
 
 The prompt runner looks for the `--verbose` flag (`-v`) to print the output of
-the model. This can be helpful for getting context for a error message:
+the model. This can be helpful for getting context for an error message:
 
     python -m boot --verbose
     python -m main --verbose
@@ -111,11 +111,7 @@ the model. This can be helpful for getting context for a error message:
 If the `builder` run fails, there is probably a bug in the generated source
 code. Old-fashioned debugging is possible at this point, see sources in `src/`.
 To generate better sources, prompts will need to be engineered. Consider posting
-an issue in GitHub, including the generated sources.
-
-If `app.run` does not have the desired behavior, then that is probably because
-you are asking more of the builder than it can currently handle. Consider
-simplifying your request or waiting until we catch up.
+an issue on GitHub and include the generated sources.
 
 Still stuck? Cheat a little and use
 [patch-openai](https://github.com/leovandriel/patch-openai) to log and cache all
@@ -126,7 +122,7 @@ API calls.
 *Why?*
 
 Application building tools like
-[gpt-engineer](https://github.com/AntonOsika/gpt-engineer) are showing promise
+[gpt-engineer](https://github.com/AntonOsika/gpt-engineer) are showing promise,
 but still get stuck on relatively simple applications. To understand what is
 really needed to write software using a GPT, we'll start from scratch and
 understand the fundamental challenges that come with AI-generated code.
@@ -136,16 +132,16 @@ understand the fundamental challenges that come with AI-generated code.
 That would be great. The primary reason is that the OpenAI API returns text (and
 calls functions), but does not write complex applications, so we still need to
 write code to transform model output into our application and guide it along the
-way. The whole point of this project is not to write code, but to use prompts,
-so we're left with bootstrapping from shorter and instructive prompts.
+way. The point of this project is not to write code, but to use prompts, so
+we're left with bootstrapping from shorter and instructive prompts.
 
 Secondly, we haven't managed to get GPT to write large amounts of functioning
-code from a single prompt. It will likely get there, and as it gets closer we
+code from a single prompt. It will likely get there, and as it gets closer, we
 incrementally simplify the boot prompts.
 
-*Isn't this just an painful way to write mediocre code?*
+*Isn't this just a painful way to write mediocre code?*
 
-For now it is.
+It certainly feels that way.
 
 ## License
 
