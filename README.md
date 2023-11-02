@@ -25,7 +25,7 @@ Boot the application builder (takes a minute):
 
 Run the builder:
 
-    python -m builder write a script in factorial.py that prints the factorial of the provided argument
+    python -m builder write a script in factorial.py that prints factorial of the provided argument
     python -m builder in the file factorial.py, update the usage text to "usage: factorial int"
 
 Run your application:
