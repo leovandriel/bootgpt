@@ -1,5 +1,5 @@
 Write a script to: 
 
-1. Read prompts/request/handle/code.txt
+1. Read pmt/request/handle/code.txt
 2. Call `run_prompt` (import from src.api) with the prompt
 3. Write the result to src/request.py

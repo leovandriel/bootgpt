@@ -1,0 +1,6 @@
+Write a script to:
+
+1. Import src.api
+2. Read "pmt/api/model_arg/code_1.txt" and call `src.request.handle` (import `src.request`) with it
+2. Read "pmt/api/model_arg/code_2.txt" and call `src.request.handle` (import `src.request`) with it
+3. Reload src.api

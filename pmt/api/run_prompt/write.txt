@@ -3,7 +3,7 @@ Example messages: [{"role": "user", "content": "Hello world"}])
 Write a script to:
 
 1. Import src.api
-2. Read a prompt from "prompts/api/run_prompt/code.txt"
+2. Read a prompt from "pmt/api/run_prompt/code.txt"
 3. Create a messages array that wraps the system ("You are a Python code generator who only replies with Python code. No additional explanation or instructions.") and prompt
 4. Call src.api.run with the messages
 5. Regex replace "[`]{2,}[a-z]*" with ""

@@ -1,0 +1,5 @@
+Write a script to:
+
+1. Import src.request
+2. Read "pmt/request/model_upgrade/code.txt". Call `src.request.handle` with the file contents.
+3. Reload src.request

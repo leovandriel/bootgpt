@@ -5,12 +5,18 @@ From openai-python: Chat models such as gpt-3.5-turbo and gpt-4 can be called us
 
 Write a script to:
 
-1. Read a prompt from "prompts/api/run/code.txt"
-2. Call the chat completions API:
+1. Print "Bootstrapping.."
+2. Read a list of prompts files:
+    * pmt/api/run/write.txt
+    * pmt/api/run_cached/write.txt
+    * pmt/api/run_prompt/write.txt
+    * pmt/api/snapshot/run.txt
+    * pmt/main/write.txt
+3. For each prompt, call the chat completions API:
     * system: "You are a Python code generator who only replies with Python code. No additional explanation or instructions."
     * parameters:
         * api_key: read from "key.txt"
         * model: gpt-3.5-turbo
         * temperature: 0.001
-3. Regex replace "[`]{2,}[a-z]*" with ""
-4. Write result to src/api.py, creating src folder if needed
+4. Regex replace "[`]{2,}" with "#"
+5. Run each using exec

@@ -2,11 +2,11 @@ Write a script to:
 
 1. If src/api.py.snapshot exists, copy it to src/api.py
 2. Read a list of prompts files:
-    * prompts/request/handle/write.txt
-    * prompts/api/model_arg/write.txt
-    * prompts/request/model_upgrade/write.txt
-    * prompts/builder/write.txt
-    * prompts/test/run.txt
+    * pmt/request/handle/write.txt
+    * pmt/api/model_arg/write.txt
+    * pmt/request/model_upgrade/write.txt
+    * pmt/builder/write.txt
+    * pmt/test/run.txt
 2. For each, print "Bootstrapping: " followed by the path of the prompt
 3. Read the prompt file and call `run_prompt` (import from src.api)
 4. Run the result using exec

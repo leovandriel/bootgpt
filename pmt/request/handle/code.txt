@@ -4,7 +4,7 @@ Example messages: [{"role": "system", "content": "You are an assistant"}, {"role
 
 Define function `handle` with argument `request` string:
 
-1. Read prompts/request/handle/system.txt
+1. Read pmt/request/handle/system.txt
 2. Keep a list of messages, initialized with system content and user request 
 3. Loop over the following:
     * Call `run_cached` (import src.api) with messages argument

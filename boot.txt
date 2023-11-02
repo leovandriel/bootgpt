@@ -5,7 +5,7 @@ From openai-python: Chat models such as gpt-3.5-turbo and gpt-4 can be called us
 
 Write a python script to:
 
-1. Read a prompt from prompts/reboot/run.txt
+1. Read a prompt from pmt/reboot/run.txt
 2. Call the chat completions API:
     * system: "You are a Python code generator who only replies with Python code. No additional explanation or instructions."
     * parameters:
