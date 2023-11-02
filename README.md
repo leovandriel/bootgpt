@@ -116,6 +116,10 @@ If `app.run` does not have the desired behavior, then that is probably because
 you are asking more of the builder than it can currently handle. Consider
 simplifying your request or waiting until we catch up.
 
+Still stuck? Cheat a little and use
+[patch-openai](https://github.com/leovandriel/patch-openai) to log and cache all
+API calls.
+
 ## FAQ
 
 *Why?*
