@@ -1,6 +1,7 @@
 From openai-python: Chat models such as gpt-3.5-turbo and gpt-4 can be called using the chat completions endpoint.
 
-    completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
+    from openai import OpenAI
+    completion = OpenAI(api_key="..").chat.completions.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
     print(completion.choices[0].message.content)
 
 Write a script with a function `run` with argument `messages` to:
@@ -12,3 +13,5 @@ Write a script with a function `run` with argument `messages` to:
     * temperature: 0.001
     * messages
 3. Return the content
+
+Use `OpenAI(api_key="..").chat.completions`, NOT `openai.ChatCompletion`.

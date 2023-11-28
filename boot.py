@@ -1,8 +1,8 @@
-import openai
+from openai import OpenAI
 
 exec(
-    openai.ChatCompletion.create(
-        api_key=open("key.txt").read(),
+    OpenAI(api_key=open("key.txt").read())
+    .chat.completions.create(
         model="gpt-3.5-turbo",
         temperature=0.001,
         messages=[

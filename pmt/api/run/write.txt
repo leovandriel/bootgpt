@@ -1,16 +1,16 @@
 From openai-python: Chat models such as gpt-3.5-turbo and gpt-4 can be called using the chat completions endpoint.
 
-    completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
+    from openai import OpenAI
+    completion = OpenAI(api_key="..").chat.completions.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
     print(completion.choices[0].message.content)
 
 Write a script to:
 
 1. Read a prompt from "pmt/api/run/code.txt"
 2. Call the chat completions API:
+    * api_key: read from "key.txt"
     * system: "You are a Python code generator who only replies with Python code. No additional explanation or instructions."
-    * parameters:
-        * api_key: read from "key.txt"
-        * model: gpt-3.5-turbo
-        * temperature: 0.001
+    * model: gpt-3.5-turbo
+    * temperature: 0.001
 3. Regex replace "[`]{2,}[a-z]*" with ""
 4. Write result to src/api.py, creating src folder if needed
